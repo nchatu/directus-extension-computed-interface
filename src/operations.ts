@@ -190,6 +190,9 @@ function _parseExpression(
 				if (op === 'ENCODE_URL_COMPONENT') {
 					return encodeURIComponent(valueA);
 				}
+				if( op === 'PAD_START') {
+					return String(valueA).padStart(3, '0');
+				}
 				// array
 				if (op === 'ARRAY_LEN') {
 					if (valueA instanceof Array) {
